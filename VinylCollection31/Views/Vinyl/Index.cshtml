@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<VinylCollection31.Models.Record>
+@{
+    ViewData["Title"] = "Vinyl Collection";
+
+}
+
+
+<br />
+<h3>My Vinyl Collection</h3>
+<br />
+
+<div class="row">
+    <div>
+        <a asp-action="Create" class="btn btn-sm btn-success">New Album</a>
+    </div>
+    @*<div>
+            Search: <input type="text" id="searchkey"><a asp-action="Index" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Go!</a>
+        </div>*@
+</div>
+<br />
+<div class="form-border">
+    <table class="table table-sm">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(r => r.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(r => r.Title)
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(r => item.Artist)
+                </td>
+                <td>
+                    @Html.DisplayFor(r => item.Title)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a>
+                    @*<a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Details</a>*@
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td>@Model.Count() albums retrieved</td>
+        </tr>
+
+
+    </table>
+</div>
+

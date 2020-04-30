@@ -1,0 +1,29 @@
+﻿
+
+.btn-new .btn-new:hover .btn-new:active .btn-new:visited {
+    background-color: blueviolet !important;
+    color: white !important;
+}
+
+.btn-edit {
+    background-color: darkgreen !important;
+    color: white !important;
+}
+
+.btn-delete {
+    background-color: firebrick !important;
+    color: white !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #8064A2 !important;
+    border-color: #8064A2 !important;
+}
+
+
+body {
+}

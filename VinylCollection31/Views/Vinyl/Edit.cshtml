@@ -1,0 +1,43 @@
+﻿@model VinylCollection31.Models.Record
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<br />
+<h2>Edit your album details</h2>
+<hr />
+
+<form asp-action="Edit">
+    <div class="row">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Artist"></label>
+                </div>
+                <div class="col-sm-10">
+                    <input asp-for="Artist" class="form-control" />
+                </div>
+                <span asp-validation-for="Artist" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Title"></label>
+                </div>
+                <div class="col-sm-10">
+                    <input asp-for="Title" class="form-control" />
+                </div>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+
+                <input type="submit" value="Update Album" class="btn btn-small btn-info" />
+                <input type="submit" asp-action="Index" value="Back" class="btn btn-small btn-info" />
+            </div>
+        </div>
+    </div>
+</form>
+
